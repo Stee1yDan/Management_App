@@ -23,5 +23,5 @@ public class Employee implements Serializable
     private String phoneNumber;
     private String imageURL;
     @Column(nullable = false, updatable = false)
-    private String employeeNumber;
+    private String employeeCode;
 }
