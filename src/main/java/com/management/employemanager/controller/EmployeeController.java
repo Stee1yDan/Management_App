@@ -50,4 +50,19 @@ public class EmployeeController
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    @GetMapping("/add/dummy")
+    public ResponseEntity<Employee> addTestEmployee()
+    {
+        return new ResponseEntity<>(employeeService.addEmployee(
+                new Employee
+                        (
+                                "Bobson Dugnut",
+                                "bobson11@dugnut.com",
+                                "Baseball Player",
+                                "1-234-56-78",
+                                "dugnut.jpg"
+                        )
+        ), HttpStatus.OK);
+    }
+
 }

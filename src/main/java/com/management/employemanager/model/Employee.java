@@ -10,7 +10,6 @@ import java.io.Serializable;
 @Entity
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 public class Employee implements Serializable
 {
     @Id
@@ -24,4 +23,13 @@ public class Employee implements Serializable
     private String imageURL;
     @Column(nullable = false, updatable = false)
     private String employeeCode;
+
+    public Employee(String name, String email, String occupation, String phoneNumber, String imageURL)
+    {
+        this.name = name;
+        this.email = email;
+        this.occupation = occupation;
+        this.phoneNumber = phoneNumber;
+        this.imageURL = imageURL;
+    }
 }
